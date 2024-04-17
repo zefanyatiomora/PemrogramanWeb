@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login Form</h1>
+    <form action="loginProses.php" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Login">
+    </form>
+    <?php
+    include "koneksi.php";
+
+    $username = $_POST['username'];
+    $password = md5($_POST['password']);
+
+    $query = "SELECT * FROM user WHERE username='$username' and password='$password'";
+    $result = mysqli_query($koneksi, $query);
+    $cek = mysqli_num_rows($result);
+
+    if ($cek > 0) {
+        echo "Anda berhasil login, silahkan menuju <a href='homeAdmin.html'>halaman admin</a>";
+    } else {
+        echo "Anda gagal login. Silahkan <a href='loginForm.html'>Login kembali</a>";
+    }
+    ?>
+</body>
+</html>
