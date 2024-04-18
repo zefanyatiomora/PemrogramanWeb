@@ -1,0 +1,82 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+h1, h2, h3 {
+  color: #333;
+}
+.dashboard {
+  background-color: #89dac4;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 150px;
+  height: auto;
+}
+.daftar-button {
+  padding: 10px 20px;
+  background-color: #f3a63a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.daftar-button:hover {
+  background-color: #f3a63a;
+}
+.date {
+  font-weight: bold;
+}
+.event {
+  margin-left: 10px;
+}
+.footer {
+  background-color: #333;
+  color: #89dac4;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.timeline ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.timeline ul li {
+  position: relative;
+  padding-left: 20px;
+}
+.timeline ul li::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 0;
+  height: 100%;
+  border-left: 2px solid #2b1515;
+}
+.timeline ul li:last-child::before {
+  height: 50%;
+}
+.timeline ul li span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.timeline ul li span.date {
+  color: #f3a63a;
+}
+
+ 

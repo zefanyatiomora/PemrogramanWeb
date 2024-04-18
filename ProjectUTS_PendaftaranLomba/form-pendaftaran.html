@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Lomba Karya Tulis Ilmiah Nasional</title>
+    <link rel="stylesheet" href="formstyle.css">
+</head>
+<body>
+    <div class="dashboard">
+            <img src="logo.png" alt="Logo Lomba" class="logo">
+    </div>
+    <div class="container">
+        <h1>Form Pendaftaran Lomba Karya Tulis Ilmiah Nasional</h1>
+    </div>
+    <div>
+        <form id="formPendaftaran" action="submit.php" method="post" onsubmit="return validateForm()" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="namaLengkap">Nama Lengkap:</label>
+                    <input type="text" id="namaLengkap" name="namaLengkap" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="nim">NIM:</label>
+                    <input type="text" id="nim" name="nim" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="universitas">Universitas:</label>
+                    <input type="text" id="universitas" name="universitas" class="form-control" required>
+                </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="berkasKTP">Bukti KTP:</label>
+                    <input type="file" id="berkasKTP" name="berkasKTP" class="form-control" required>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="kategori">Kategori:</label>
+                        <select id="kategori" name="kategori" class="form-control" required>
+                            <option value="">Pilih Kategori</option>
+                            <option value="Teknologi Informasi dan Komunikasi">Teknologi Informasi dan Komunikasi</option>
+                            <option value="Ilmu Sosial dan Humaniora">Ilmu Sosial dan Humaniora</option>
+                            <option value="Ekonomi dan Bisnis">Ekonomi dan Bisnis</option>
+                            <option value="Sains dan Teknologi">Sains dan Teknologi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+                
+    <div id="notification" class="notification"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
